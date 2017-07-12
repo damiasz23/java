@@ -19,7 +19,6 @@ public class Fibonacci {
             b = wynik;
         }
         return wynik;
-
     }
     public static void main(String[] args) {
 
