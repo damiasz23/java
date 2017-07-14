@@ -13,7 +13,7 @@ public class Kolo {
     }
 
     public double Obwod(){
-        double obwod = Math.PI * promien* 2;
+        double obwod = 2 * Math.PI * promien;
         return obwod;
     }
 }
