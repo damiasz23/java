@@ -5,10 +5,25 @@ package drugiTydzie.piatek.promien;
  */
 public class Kolo {
 
-    public double promien;
+    private double promien;
+
+
+    public double getPromien(){
+        return this.promien;
+    }
+
+    public void setPromien(double r){
+        if(r <0 ){
+            System.out.println("Promień nie może być ujemny");
+        }
+        else {
+            this.promien = r;
+        }
+    }
+
 
     public double Area(){
-        double pole = Math.PI * (promien*promien);
+        double pole = Math.PI * Math.pow(promien, 2);
         return pole;
     }
 

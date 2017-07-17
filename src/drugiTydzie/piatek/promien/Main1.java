@@ -17,8 +17,9 @@ public class Main1 {
         double promien = in.nextDouble();
 
         Kolo kolo = new Kolo();
-        kolo.promien = promien;
+//        kolo.promien = promien;
         kolo.Obwod();
+        kolo.setPromien(promien);
 
         kolo.Area();
         System.out.println(" Pole koła o promieniu: " + promien + " wynisi: " + kolo.Area());
@@ -26,6 +27,7 @@ public class Main1 {
         kolo.Obwod();
         System.out.println(" Obwód koła o promieniu: " + promien + " wynisi: " + kolo.Obwod());
 
+        System.out.println("Promiń to: " + kolo.getPromien());
 
     }
 }
