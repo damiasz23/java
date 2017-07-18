@@ -16,9 +16,24 @@ public class Company {
         numerOfEmployees = 0;
     }
 
-    public void printEmployees(){
-        for(Employee e : employees){
+    public void printEmployeesBad(){
+
+        for(Employee e : employees) {
             e.describeEmploeey();
+        }
+    }
+
+    public void printEmployees(){
+
+        if(numerOfEmployees==0) {
+            System.out.println("W firmie nie ma jeszcze pracowników, naciśnij 1 aby dodać pracownika.");
+        }
+        else{
+            for(int i = 0; i < numerOfEmployees; i++){
+                Employee emp = employees[i];
+                emp.describeEmploeey();
+
+            }
         }
     }
 
@@ -26,5 +41,38 @@ public class Company {
         employees[numerOfEmployees] = nextEmployee;
         numerOfEmployees++;
 
+    }
+
+    public double countAverageSalary(){
+        double sum = 0;
+        for(int i = 0; i < numerOfEmployees; i++){
+            Employee nextEmp = employees[i];
+            sum += nextEmp.getSalary();
+        }
+        return sum / numerOfEmployees;
+    }
+
+    public double countAverageAge(){
+
+        double sum = 0;
+        for (int i = 0; i < numerOfEmployees; i++){
+            Employee nextEmp = employees[i];
+            sum += nextEmp.getAge();
+        }
+        return sum/numerOfEmployees;
+    }
+
+    public Employee getEmployeeWithHigestSalary(){
+
+        Employee maxEmp = null;
+        double maxSal = 0;
+        for (int i = 0; i < numerOfEmployees; i++){  // wypisujemy wszystkich pracowników
+            Employee nextSal = employees[i];
+            if(employees[i].getSalary() > maxSal){    //
+                maxSal = nextSal.getSalary();
+                maxEmp = employees[i];
+            }
+        }
+        return maxEmp;
     }
 }
