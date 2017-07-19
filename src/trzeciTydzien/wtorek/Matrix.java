@@ -1,4 +1,4 @@
-package trzeciTydzien;
+package trzeciTydzien.wtorek;
 
 import java.util.Scanner;
 
@@ -13,11 +13,17 @@ public class Matrix {
     private int[][] secondMacierz;
 
 
-    public Matrix(){
-        n = 3;
-        m = 3;
-        macierz = new int[m][n];
+    public Matrix(int n, int m){
+        this.n = n;
+        this.m = m;
+        this.macierz = new int[m][n];
+        if(n < 0 && m < 0){
+            System.out.println("Wymiary macierzy nie moga być ujemne");
+        }
+
     }
+
+
 
     public int[][] getMacierz() {
         return macierz;
@@ -69,29 +75,39 @@ public class Matrix {
             }
             System.out.println();
         }
+        System.out.println();
 
     }
 
     public Matrix addMatrix(Matrix drugaMacierz){
 
-        Matrix wynikowa = new Matrix();
+        Matrix wynikowa = new Matrix(3, 3);
 
-        for (int i = 0 ; i < m ; i++){
-            for (int j = 0 ; j < m ; j++){
-                wynikowa.getMacierz()[i][j] = this.macierz[i][j] + drugaMacierz.getMacierz()[i][j];
+        if(this.m == drugaMacierz.getM() && this.n == drugaMacierz.getN()) {
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < m; j++) {
+                    wynikowa.getMacierz()[i][j] = this.macierz[i][j] + drugaMacierz.macierz[i][j]; //na obiekcie "wynikowa" chcemy dostac sie do pól, uzywamy do tego gettera "getMacierz".
+                }
+            }
+            return wynikowa;
+        }
+        else{
+            return wynikowa;
+        }
+
+
+    }
+    public Matrix subMatrix(Matrix trzeciaMacierz){
+        Matrix wynikowa = new Matrix(3, 3);
+
+        for (int i = 0 ; i < m ; i++) {
+            for (int j = 0; j < m; j++) {
+                wynikowa.getMacierz()[i][j] = this.macierz[i][j] - trzeciaMacierz.macierz[i][j];
+
             }
         }
-        return wynikowa;
-
-
+            return wynikowa;
     }
-    public void addMatrixToMatrix(Matrix n){
 
-
-//        for ( int i = 0 ; i < m ; i++ )
-//            for ( int j = 0 ; j < n ; j++ )
-//                sum[i][d] = first[i][d] + second[i][d];
-
-    }
 }
 
