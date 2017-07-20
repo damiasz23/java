@@ -54,6 +54,7 @@ public class BinomialSolver {
             System.out.println("Delta wieksza od 0 - wynik pierwszy: " + x1);
             System.out.println("Delta wieksza od 0 - wynik drugi: " + x2);
 
+
         }
         else if(delta == 0){
             x1 = - b /2 * a;
