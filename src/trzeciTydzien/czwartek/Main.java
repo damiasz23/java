@@ -16,7 +16,6 @@ public class Main {
         System.out.println("Podaj trzeci współczynniki");
         double c = in.nextDouble();
 
-
         BinomialSolver bio = new BinomialSolver(a, b, c);
         bio.count();
 
