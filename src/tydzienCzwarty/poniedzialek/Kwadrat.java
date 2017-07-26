@@ -1,4 +1,6 @@
-package tydzienCzwarty;
+package tydzienCzwarty.poniedzialek;
+
+import tydzienCzwarty.poniedzialek.Figura;
 
 /**
  * Created by RENT on 2017-07-24.

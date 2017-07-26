@@ -1,4 +1,6 @@
-package tydzienCzwarty;
+package tydzienCzwarty.poniedzialek;
+
+import tydzienCzwarty.poniedzialek.Figura;
 
 /**
  * Created by olaIdamian on 7/25/2017.
@@ -11,8 +13,6 @@ public class Trapez extends Figura {
     private double d;
     private double h;
 
-    public Trapez() {
-    }
 
     public Trapez(double a, double b, double h) {
         this.a = a;

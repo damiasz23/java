@@ -1,4 +1,4 @@
-package tydzienCzwarty;
+package tydzienCzwarty.poniedzialek;
 
 import java.util.Scanner;
 

@@ -1,10 +1,7 @@
-package tydzienCzwarty;
+package tydzienCzwarty.poniedzialek;
 
 import java.util.Scanner;
 
-/**
- * Created by RENT on 2017-07-24.
- */
 public class Main {
     public static void main(String[] args) {
 
@@ -39,15 +36,14 @@ public class Main {
                     System.out.println("Podaj bok kwadratu");
                     double bok = in.nextDouble();
                     Figura kwadrat = new Kwadrat(bok);
-
-                    switch (obl){
-                        case 'p':{
+                    switch (obl) {
+                        case 'p': {
                             System.out.println("Pole kwadratu to: " + kwadrat.pole());
                             break;
                         }
-                        case 'o':{
+                        case 'o': {
                             System.out.println("Obwód kwadratu to: " + kwadrat.obwod());
-                           break;
+                            break;
                         }
                     }
                     break;
@@ -88,7 +84,6 @@ public class Main {
                     break;
                 }
                 case 4:{
-                    Figura trapez = new Trapez();
                     switch (obl) {
                         case 'p': {
                             System.out.println("Podaj pierwszy bok trapezu");
@@ -97,6 +92,7 @@ public class Main {
                             double bokB = in.nextDouble();
                             System.out.println("Podaj wysokość trapezu");
                             double wysokosc = in.nextDouble();
+                            Figura trapez = new Trapez(bokA, bokB, wysokosc);
                             System.out.println("Pole trapezu to: " + trapez.pole());
                             break;
                         }
@@ -109,7 +105,9 @@ public class Main {
                             double bokC = in.nextDouble();
                             System.out.println("Podaj czwarty bok trapezu");
                             double bokD = in.nextDouble();
+                            Figura trapez = new Trapez(bokA, bokB, bokC, bokD);
                             System.out.println("Obwód trapezu to: " + trapez.obwod());
+                            break;
                         }
                     }
                     break;
@@ -120,7 +118,6 @@ public class Main {
                     break;
                 }
             }
-
         }
     }
 }

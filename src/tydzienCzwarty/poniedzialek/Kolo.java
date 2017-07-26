@@ -1,4 +1,6 @@
-package tydzienCzwarty;
+package tydzienCzwarty.poniedzialek;
+
+import tydzienCzwarty.poniedzialek.Figura;
 
 /**
  * Created by olaIdamian on 7/25/2017.
