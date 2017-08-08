@@ -6,30 +6,20 @@ import java.util.Scanner;
 public class Palindrom {
     public static void main(String[] args){
 
-        String original, odwrotnie;
+        String original;
         Scanner in = new Scanner(System.in);
 
         System.out.println("Podaj zdanie max do 30 znaków");
         original = in.nextLine();
 
-        int length = original.length();
-
-
         if (original.length()<= 30) {
-
-            for(int i = 0; i <= original.length(); i--){
+            for(int i = original.length()-1; i >=0; i--){
                 char znak = original.charAt(i);
-                System.out.println(znak);
-
-
+                System.out.print(znak);
             }
-
         }
         else{
             System.out.println("Zdanie ma więcej niz 30 znaków");
         }
-
-
-
     }
 }
