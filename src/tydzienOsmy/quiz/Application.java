@@ -39,7 +39,7 @@ public class Application {
 
                     int correctAnswersCounter = 0;
                     for (int i =0  ;i <questions.size() ;i++) {
-                        System.out.println("Pytanie nr: " + (i +1));
+                        System.out.println("Pytanie nr: " + (i + 1));
                         Question que = questions.get(i);
                         System.out.println(que);
 
@@ -48,11 +48,10 @@ public class Application {
                         String answer = in.next();
 
                         if(que.getCorrectAnswers().equals(answer)){
-                            System.out.println("-----Dobrze!!!-----");
+                            System.out.println("-----Prawidlowa odpowiedz------");
                             correctAnswersCounter++;
-                        }
-                        else {
-                            System.out.println("-----Żle-----");
+                        }else{
+                            System.out.println("-----Błąd-----");
                         }
                     }
                     System.out.println();
@@ -69,7 +68,7 @@ public class Application {
                     break;
                 }
                 case 2: {
-                    System.out.println("Lista wyników");
+                    System.out.println("Najwyższe wyniki");
                     List<String> ranking = Quiz.getRanking();
                     if (ranking != null) {
                         for (String wynik : ranking) {
