@@ -80,9 +80,6 @@ public class Application {
                     }
                     break;
                 }
-                case 3: {
-                    System.out.println("Twoja odpowiedz to: ");
-                }
                 case 0: {
                     System.out.println("Wyjście");
                 }
