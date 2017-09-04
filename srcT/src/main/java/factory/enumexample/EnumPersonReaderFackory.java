@@ -13,13 +13,10 @@ public class EnumPersonReaderFackory {
 
             case TXT:
                 return new TxtPersonFileReader();
-
             case XML:
                 return new XmlPersonFileReader();
-
             case JSON:
                 return new JsonPersonFileReader();
-
         }
         return null;
     }
