@@ -1,5 +1,10 @@
-package factory;
+package factory.simplefactory;
 
+
+import factory.JsonPersonFileReader;
+import factory.PersonFileReader;
+import factory.TxtPersonFileReader;
+import factory.XmlPersonFileReader;
 
 import java.util.List;
 
