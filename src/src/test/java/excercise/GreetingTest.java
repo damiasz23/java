@@ -57,4 +57,10 @@ public class GreetingTest {
         String result = greeting.greet("Piotr", "Anna", "Paulina");
         assertEquals("Hello, Piotr, Anna and Paulina", result);
     }
+
+    @Test
+    public void moreNames() throws Exception {
+        String result = greeting.greet("Geniu", "Zdzichu");
+        assertEquals("Hello, Geniu and Zdzichu", result);
+    }
 }

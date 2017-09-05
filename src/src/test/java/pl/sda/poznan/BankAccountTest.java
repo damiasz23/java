@@ -12,7 +12,7 @@ public class BankAccountTest {
 
         double deposit = bankAccount.deposit(200);
         assertEquals(200, 200, 1);
-        fail();
+
     }
 
     @Test(expected = IllegalArgumentException.class)

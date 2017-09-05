@@ -1,9 +1,7 @@
 package factory;
 
-import javafx.beans.property.SimpleListProperty;
+import factory.simplefactory.SimplePersonReaderFactory;
 import org.junit.Test;
-
-import java.util.List;
 
 import static org.junit.Assert.*;
 
