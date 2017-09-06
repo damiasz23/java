@@ -21,8 +21,6 @@ public class PersonReaderFactory implements Factory<PersonReaderFileType, Person
         map.put(PersonReaderFileType.XML, () -> new XmlPersonFileReader());
     }
 
-
-
     @Override
     public PersonFileReader create(PersonReaderFileType key) {
 //        if(map.containsKey(key)){
