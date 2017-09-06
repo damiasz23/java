@@ -16,6 +16,8 @@ public class Computer {
     private String ram;
     private String mainboard;
 
+//    tu są gettery settery i kontryktor
+
 
     public static class ComputerBuilder {
         private String processor;
