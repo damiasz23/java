@@ -2,9 +2,13 @@ package observer;
 
 public abstract class Observer<T> {
 
-    protected T observedObject;
+    private T observedObject;
 
-    public abstract void onChange(Object sender, PriceChangeEventArgs e);
+    public Observer(T observedObject) {
+        this.observedObject = observedObject;
+    }
+
+    protected abstract void onChange(T sender, PriceChangeEventArgs e);
 
 
 }
