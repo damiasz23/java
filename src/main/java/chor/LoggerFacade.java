@@ -6,10 +6,12 @@ public class LoggerFacade {
     private static Logger debug = new DebugLogger();
     private static Logger error = new ErrorLogger();
 
-    public LoggerFacade() {
+
+    static {
         info.setNextLogger(debug);
         debug.setNextLogger(error);
     }
+
 
     public static void log(LogLevel level, String message){
         info.logMessage(level, message);
