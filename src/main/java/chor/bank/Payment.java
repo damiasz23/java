@@ -29,7 +29,6 @@ public abstract class Payment {
         }
         return false;
     }
-
     protected abstract boolean handlePayment(Double amount);
 
 }
